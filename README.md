@@ -1,54 +1,44 @@
-🚗 Unity Autopeli
-Unity Autopeli on pienimuotoinen ajopeli, jossa pelaaja voi ohjata autoa ja säätää sen ajodynamiikkaan liittyviä ominaisuuksia, kuten jousitusta ja ohjausta. Projekti toimii pohjana laajemmalle ajosimulaattorille, johon on suunnitteilla lisää autoja ja tuning-ominaisuuksia.
+# 🚗 Unity Autopeli
 
-🎮 Ominaisuudet
-Reaaliaikainen auton ohjaus (kaasu, jarru, peruutus, käsijarru)
+Pienimuotoinen ajopeli, jossa voit ohjata autoa ja säätää sen teknisiä ominaisuuksia, kuten jousitusta ja ohjautuvuutta. Tulevaisuudessa peliin lisätään useampia ajoneuvoja sekä tuning-ominaisuuksia.
 
-Säädettävä jousitus ja kitka
+---
 
-Äänitehosteet moottorille, skaalautuva kierroslukujen mukaan
+## 🔧 Ominaisuudet
 
-Pehmeä ohjaus ja jarrutustoiminta
+- Reaaliaikainen ohjaus: kaasu, jarru, peruutus, käsijarru
+- Pehmeä jarrutus ja ohjaus (smooth steering & braking)
+- Säädettävä jousitus ja renkaiden kitka
+- Dynaaminen moottoriääni nopeuden mukaan
+- Visuaalisesti synkronoidut pyörät ja fysiikka
 
-Tarkka visuaalinen synkronointi pyörien ja fysiikan välillä
+---
 
-🛠 Tekninen toteutus
-Moottorivoima ja jarrutus perustuvat WheelCollider-komponenttiin
+## ⚙️ Tekniikka
 
-Jousitus määritellään JointSpring-rakenteella
+- **Moottori & jarrutus**: `WheelCollider` + `Rigidbody`
+- **Jousitus**: konfiguroitavissa `JointSpring`-arvoilla
+- **Äänet**: `AudioSource` säätää pitchiä nopeuden mukaan
+- **Ohjaus**: sujuva `Mathf.SmoothDamp` ohjausvaste
 
-Ohjaus toteutettu pehmennetyllä kulman säädöllä (SmoothDamp)
+---
 
-Äänet reagoivat ajonopeuteen dynaamisella pitch-skaalauksella
+## 🧪 Testaus
 
-Fysiikat perustuvat Unityn Rigidbody-järjestelmään
+- Käytössä yksi testiauto
+- Eri jousitus- ja kitka-arvojen kokeilua
+- Tavoitteena realistinen ja/tai viihdyttävä ajokokemus
 
-Säädettävät parametrit inspectorin kautta (muun muassa jouset, vaimentimet, kitka)
+---
 
-🧪 Testaus
-Projektia testataan tällä hetkellä yhdellä ajoneuvolla. Tavoitteena on:
+## 🚧 Suunnitteilla
 
-Testata ajotuntumaa erilaisilla jousitus- ja kitka-arvoilla
+- ✅ Useita valittavia autoja
+- 🔧 Auton tuning (moottori, väri, jouset, vanteet)
+- 🏁 Pelimuodot (aika-ajot, drift-kisat)
+- 💾 Tallennus & lataus auton asetuksille
+- 🖥️ UI säätövalikoille
 
-Hakea realistista tai viihdyttävää ajokokemusta
+---
 
-Optimoida ohjausvaste ja ääniympäristö
-
-🔮 Tulevaisuuden suunnitelmat
-Useita ajoneuvoja valittavaksi
-
-Tuning-ominaisuudet (mm. vanteet, värit, tehot, jouset)
-
-Pelitilat (esim. aika-ajot, drift-pisteytys)
-
-Tallennusjärjestelmä autoasetuksille
-
-Graafinen käyttöliittymä säätöihin
-
-🧩 Riippuvuudet
-Unity 2021.3+ (tai uudempi suositeltu)
-
-Ei ulkopuolisia assetteja vaadita tässä vaiheessa
-
-📃 Lisenssi
-Tämä on ei-kaupallinen projekti kehityksen ja oppimisen tueksi. Voit vapaasti haarauttaa, muokata ja käyttää koodia omiin tarkoituksiisi.
+## 📁 Kansion rakenne

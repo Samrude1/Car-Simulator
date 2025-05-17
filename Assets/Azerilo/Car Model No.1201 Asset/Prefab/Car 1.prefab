@@ -292,7 +292,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.9749725, y: 0.39958817, z: 1.8560104}
-  m_Center: {x: 0, y: 1.1992195, z: -0.71032333}
+  m_Center: {x: 0, y: 1.14, z: -0.71032333}
 --- !u!1 &1048226503987724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1304,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a27a8be488cbb5d4bac448dda9339b95, type: 2}
+  - {fileID: 2100000, guid: 3f47f4d644d848c4aa8dce558daa5b85, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3104,9 +3104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motorForce: 2000
-  brakeForce: 30
+  brakeForce: 1
   brakeSensitivity: 50
-  maxSteerAngle: 30
+  maxSteerAngle: 25
   frontLeftWheelCollider: {fileID: 3189389288225112105}
   frontRightWheelCollider: {fileID: 5411236673204012801}
   rearLeftWheelCollider: {fileID: 1165660854047316283}

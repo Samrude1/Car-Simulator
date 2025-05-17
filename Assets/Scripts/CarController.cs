@@ -111,7 +111,7 @@ public class CarController : MonoBehaviour
     private void HandleSteering()
     {
         float targetSteerAngle = maxSteerAngle * horizontalInput;
-        currentSteerAngle = Mathf.SmoothDamp(currentSteerAngle, targetSteerAngle, ref steerAngleVelocity, 0.2f);
+        currentSteerAngle = Mathf.SmoothDamp(currentSteerAngle, targetSteerAngle, ref steerAngleVelocity, 0.3f);
 
         frontLeftWheelCollider.steerAngle = currentSteerAngle;
         frontRightWheelCollider.steerAngle = currentSteerAngle;
@@ -151,7 +151,7 @@ public class CarController : MonoBehaviour
             extremumValue = 1.5f,
             asymptoteSlip = 0.5f,
             asymptoteValue = 1.2f,
-            stiffness = 1.5f
+            stiffness = 1.7f
         };
 
         ApplyFriction(frontLeftWheelCollider, forwardFriction, sidewaysFriction);

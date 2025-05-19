@@ -40,6 +40,7 @@ public class CarController : MonoBehaviour
         SetSuspension();
     }
 
+
     private void FixedUpdate()
     {
         GetInput();
@@ -49,12 +50,13 @@ public class CarController : MonoBehaviour
         UpdateEngineSound();
     }
 
-    private void GetInput()
+
+private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        isBraking = Input.GetKey(KeyCode.Space);
-        isReversing = Input.GetKey(KeyCode.X);
+        verticalInput = Input.GetKey(KeyCode.JoystickButton0) ? 1f : 0f; //verticalInput = Input.GetAxis("Vertical");
+        isBraking = Input.GetKey(KeyCode.JoystickButton1);
+        isReversing = Input.GetKey(KeyCode.JoystickButton9);
         targetBrakeForce = Input.GetKey(KeyCode.S) ? brakeForce : 0f;
 
         // Pehmeä jarrutus
@@ -142,7 +144,7 @@ public class CarController : MonoBehaviour
             extremumValue = 1.5f,
             asymptoteSlip = 0.8f,
             asymptoteValue = 1.2f,
-            stiffness = 2.0f
+            stiffness = 1.8f
         };
 
         WheelFrictionCurve sidewaysFriction = new WheelFrictionCurve
